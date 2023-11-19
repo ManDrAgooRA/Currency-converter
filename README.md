@@ -1,8 +1,6 @@
-# React + Vite
+# Almost Google currency converter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+For starting this project you need to do next steps
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Start json-server - `npm run server`
+- Start project - `npm run dev`
