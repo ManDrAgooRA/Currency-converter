@@ -1,0 +1,9 @@
+{
+  "currencyRate": [
+    {"code":"EUR","alphaCode":"EUR","numericCode":"978","name":"Euro","rate":0.9217439395336,"inverseRate":1.0849,"date":"Thu, 16 Nov 2023 15:55:11 GMT"},{"code":"JPY","alphaCode":"JPY","numericCode":"392","name":"Japanese Yen","rate":151.21209328049,"inverseRate":0.0066132276744895,"date":"Thu, 16 Nov 2023 15:55:11 GMT"},{"code":"CZK","alphaCode":"CZK","numericCode":"203","name":"Czech Koruna","rate":22.532952345838,"inverseRate":0.044379448580545,"date":"Thu, 16 Nov 2023 15:55:11 GMT"},{"code":"PLN","alphaCode":"PLN","numericCode":"985","name":"Polish Zloty","rate":4.0307862475804,"inverseRate":0.2480905556826,"date":"Thu, 16 Nov 2023 15:55:11 GMT"},{"code":"CAD","alphaCode":"CAD","numericCode":"124","name":"Canadian Dollar","rate":1.3725689003595,"inverseRate":0.72856087569673,"date":"Thu, 16 Nov 2023 15:55:11 GMT"}
+  ],
+  "comments": [
+    { "id": 1, "body": "some comment", "postId": 1 }
+  ],
+  "profile": { "name": "typicode" }
+}

@@ -1,0 +1,23 @@
+.currency {
+  &--container{
+    color: darken($color: #9e9e9e, $amount: 30);
+    border-radius: 4px;
+    padding: 5px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+  }
+
+  &--currency{
+    color: darken($color: #9e9e9e, $amount: 30);
+    margin: 10px 0;
+  }
+}
+
+.date {
+  & a {
+    color: #9e9e9e;
+    text-decoration: none;
+  }
+}

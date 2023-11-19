@@ -1,0 +1,14 @@
+.currency {
+  &--form {
+    &-container form{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &--input {
+    margin: 8px 0px!important;
+    width: 50ch;
+  }
+}
