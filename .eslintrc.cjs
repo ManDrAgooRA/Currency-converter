@@ -23,5 +23,16 @@ module.exports = {
   },
   rules: {
     'import/prefer-default-export': 'off',
+    'max-len': [
+      'error',
+      {
+        code: 120,
+        tabWidth: 2,
+      },
+    ],
+    'import/no-extraneous-dependencies': ['error',
+      { devDependencies: false, optionalDependencies: false, peerDependencies: false }],
+    'no-param-reassign': ['error', { props: false }],
+    'react/forbid-prop-types': ['off', { forbid: ['array', 'object'] }],
   },
 };

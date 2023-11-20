@@ -1,12 +1,12 @@
-import { Box } from '@mui/material';
-import { CircularProgress } from '@mui/material';
+import React from 'react';
+import { Box, CircularProgress } from '@mui/material';
 
-import './loader.scss'
+import './loader.scss';
 
-export const Loader = () => {
+export function Loader() {
   return (
     <Box className="loader--wrapper">
       <CircularProgress color="secondary" />
     </Box>
-  )
+  );
 }

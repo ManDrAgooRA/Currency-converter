@@ -1,35 +1,49 @@
-import { useSelector } from 'react-redux'
-import { Box, Typography } from '@mui/material'
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { Box, Typography } from '@mui/material';
 
-import { CurrencyForm } from '../CurrencyForm'
-import { getCurrentDate } from '../../utlis'
-import './currencyContainer.scss'
+import { CurrencyForm } from '../CurrencyForm';
+import { getCurrentDate } from '../../utlis';
+import './currencyContainer.scss';
 
-export const CurrencyContainer = () => {
-  const { 
-    baseCurrencyCountry, 
+export function CurrencyContainer() {
+  const {
+    baseCurrencyCountry,
     baseCurrencyValue,
-    quateCurrencyCountry, 
+    quateCurrencyCountry,
     quateCurrencyValue,
-  } = useSelector((state) => state.currency)
+  } = useSelector((state) => state.currency);
 
   return (
     <Box className="currency--container">
       <Typography
         variant="body1"
-        className="currency--base">
-          {baseCurrencyValue} {baseCurrencyCountry} equals
+        className="currency--base"
+      >
+        {baseCurrencyValue}
+        {' '}
+        {baseCurrencyCountry}
+        {' '}
+        equals
       </Typography>
       <Typography
         variant="h4"
-        className="currency--currency">
-          {quateCurrencyValue} {quateCurrencyCountry}</Typography>
-      <Typography 
+        className="currency--currency"
+      >
+        {quateCurrencyValue}
+        {' '}
+        {quateCurrencyCountry}
+      </Typography>
+      <Typography
         variant="caption"
-        className="date">
-          {getCurrentDate()} · <a href="https://www.google.com/intl/en-UA/googlefinance/disclaimer/">Disclaimer</a>
+        className="date"
+      >
+        {getCurrentDate()}
+        {' '}
+        ·
+        <a href="https://www.google.com/intl/en-UA/googlefinance/disclaimer/">Disclaimer</a>
       </Typography>
       <CurrencyForm />
     </Box>
-  )
+  );
 }

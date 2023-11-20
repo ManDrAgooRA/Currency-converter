@@ -1,10 +1,10 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { Provider } from 'react-redux'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { Provider } from 'react-redux';
 
-import { store } from './store/index.js'
-import App from './App.jsx'
-import './assets/styles/index.scss'
+import { store } from './store/index';
+import App from './App';
+import './assets/styles/index.scss';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -12,4 +12,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <App />
     </Provider>
   </React.StrictMode>,
-)
+);

@@ -1,19 +1,21 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { FormControl, Select, MenuItem } from '@mui/material';
 
-export const CustomSelect = ({ listItems, defaultValue, setCurrencyCountry, setCurrencyRate }) => {
+export function CustomSelect({
+  listItems, defaultValue, setCurrencyCountry, setCurrencyRate,
+}) {
   const [selectValue, setSelectValue] = useState('');
   const dispatch = useDispatch();
 
   useEffect(() => {
-    setSelectValue(defaultValue)
-  }, [])
+    setSelectValue(defaultValue);
+  }, []);
 
   const handleChange = (e) => {
     setSelectValue(e.target.value);
-    dispatch(setCurrencyRate(e.target.value))
+    dispatch(setCurrencyRate(e.target.value));
   };
 
   return (
@@ -23,20 +25,18 @@ export const CustomSelect = ({ listItems, defaultValue, setCurrencyCountry, setC
         value={selectValue}
         onChange={handleChange}
       >
-        {listItems.map((item) => {
-          return (
-            <MenuItem 
-            key={item.name} 
-            value={item.inverseRate} 
+        {listItems.map((item) => (
+          <MenuItem
+            key={item.name}
+            value={item.inverseRate}
             onClick={() => dispatch(setCurrencyCountry(item.name))}
-            >
-              {item.name}
-            </MenuItem>
-          )
-        })}
+          >
+            {item.name}
+          </MenuItem>
+        ))}
       </Select>
     </FormControl>
-  )
+  );
 }
 
 CustomSelect.propTypes = {
@@ -44,4 +44,4 @@ CustomSelect.propTypes = {
   defaultValue: PropTypes.number.isRequired,
   setCurrencyCountry: PropTypes.func.isRequired,
   setCurrencyRate: PropTypes.func.isRequired,
-}
+};

@@ -1,1 +1,1 @@
-export * from './CurrencyContainer'
+export * from './CurrencyContainer';
