@@ -6,10 +6,10 @@ export const getCurrentDate = () => {
   const minutes = currentDate.getMinutes().toString().padStart(2, '0');
   const months = [
     'January', 'February', 'March', 'April', 'May', 'June',
-    'July', 'August', 'September', 'October', 'November', 'December'
+    'July', 'August', 'September', 'October', 'November', 'December',
   ];
 
   const formattedDate = `${months[monthNumber]}-${day}, ${hours}:${minutes}`;
 
   return formattedDate;
-}
+};
