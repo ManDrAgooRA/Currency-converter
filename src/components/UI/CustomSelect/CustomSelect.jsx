@@ -26,11 +26,11 @@ export const CustomSelect = ({ listItems, defaultValue, setCurrencyCountry, setC
         {listItems.map((item) => {
           return (
             <MenuItem 
-            key={item.code} 
+            key={item.name} 
             value={item.inverseRate} 
-            onClick={() => dispatch(setCurrencyCountry(item.code))}
+            onClick={() => dispatch(setCurrencyCountry(item.name))}
             >
-              {item.code}
+              {item.name}
             </MenuItem>
           )
         })}

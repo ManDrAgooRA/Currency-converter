@@ -3,8 +3,8 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 export const getCurrencyList = createAsyncThunk(
   'currencyList/getCurrencyList',
   async () => {
-    const responce = await fetch('http://localhost:3000/currencyRate');
-    const currencyList = responce.json();
+    const responce = await fetch('http://www.floatrates.com/daily/usd.json');
+    const currencyList = await responce.json();
 
     return currencyList
 })
@@ -50,14 +50,14 @@ const currencySlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(getCurrencyList.pending, (state) => {
-        state.isLoading = true   
+        state.isLoading = true
       })
       .addCase(getCurrencyList.fulfilled, (state, action) => {
-        state.currencyList = action.payload;
-        state.baseCurrencyCountry = action.payload[0].code
-        state.baseCurrencyRate = action.payload[0].inverseRate
-        state.quateCurrencyCountry = action.payload[1].code
-        state.quateCurrencyRate = action.payload[1].inverseRate
+        state.currencyList = Object.values(action.payload);
+        state.baseCurrencyCountry = Object.values(Object.values(action.payload))[0].name
+        state.baseCurrencyRate = Object.values(Object.values(action.payload))[0].inverseRate
+        state.quateCurrencyCountry = Object.values(Object.values(action.payload))[1].name
+        state.quateCurrencyRate = Object.values(Object.values(action.payload))[1].inverseRate
         state.isLoading = false;
       })
   }
